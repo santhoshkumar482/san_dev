@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhagaram-login</title>
+    <style>
+        body,h2{
+    margin: 0;
+}
+
+.login-main{
+    background-image: url('../assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(159, 110, 110);
+    height: 100vh;
+    background:linear-gradient(to bottom,#DDB991,#553B1E) ;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-mid{
+    background:transparent;
+    border: 2px solid #ffffff93;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    
+    
+
+}
+.login-mid h2{
+    text-align: center;
+    padding-top: 5px;
+    padding-left: 28px;
+}
+
+.email{
+    margin-top: 20px;
+    margin-left: 20px;
+    border: none;
+    width: 100%;
+
+}
+.email input{
+    width: 100%;
+    border-radius: 7px;
+    padding: 6px;
+}
+.password{
+    margin-left: 20px;
+    margin-top: 15px;
+    width: 100%;
+    
+}
+
+.password input{
+    width: 100%;
+    border-radius: 7px;
+    padding: 6px;
+}
+.login-but{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    width: 100%;
+    
+}
+
+.login-but button{
+    width: 5em;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #553B1E;
+    margin-left: 25px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="login-main">
+        <div class="login-mid">
+            
+            <form action="">
+                <h2>Login</h2>
+                <div class="email">
+                    <input type="email" placeholder="Email" id="email" required>
+                    <i class='bx bx-envelope'></i>
+                </div>
+                <div class="password">
+                    <input type="password" placeholder="Password" id="password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+              <div class="login-but">
+                <button>Login</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
