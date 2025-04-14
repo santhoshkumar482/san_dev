@@ -1,20 +1,22 @@
-# Maven
-# Build your Java project and run tests with Apache Maven.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/java
-
 trigger:
 - master
 
 pool: model_pract
 
 steps:
+- script: |
+    echo "Setting JAVA_HOME manually..."
+    set JAVA_HOME="C:\Program Files\Java\jdk-17"
+    set PATH=%JAVA_HOME%\bin;%PATH%
+    java -version
+  displayName: 'Set JAVA_HOME to JDK 17 (manual)'
+
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.17'
+    javaHomeOption: 'Path'
+    jdkDirectory: 'C:\Program Files\Java\jdk-17'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
