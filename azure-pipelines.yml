@@ -6,7 +6,7 @@
 trigger:
 - master
 
-pool:Test-my-computer
+pool: model_pract
 
 steps:
 - task: Maven@4
